@@ -1,0 +1,14 @@
+node_modules/
+out/
+dist/
+*.log
+.env*
+# Dados do usuário, banco, cofre e mídia nunca vão para o repositório
+*.sqlite
+*.sqlite-*
+*.db
+credenciais.bin
+client_secret*.json
+dados/
+backups/
+release/

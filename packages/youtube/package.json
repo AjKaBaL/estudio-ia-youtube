@@ -1,0 +1,9 @@
+{
+  "name": "@estudio/youtube",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Isola todo o acesso ao YouTube. O restante do aplicativo usa apenas a interface YouTubeGateway.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts"
+}

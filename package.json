@@ -1,0 +1,45 @@
+{
+  "name": "estudio-ia-youtube",
+  "productName": "Estúdio IA YouTube",
+  "version": "0.1.0",
+  "private": true,
+  "author": "AjKaBaL",
+  "license": "MIT",
+  "description": "Windows desktop app that runs a YouTube channel end to end: multi-source research, fact-checked scripts, AI narration, video rendering and scheduled publishing.",
+  "main": "out/main/index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json && tsc --noEmit -p packages/youtube/tsconfig.json",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "verificar": "npm run typecheck && npm run lint && npm run test",
+    "empacotar": "npm run build && electron-builder --win --config electron-builder.yml"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "electron": "44.9.3",
+    "electron-builder": "26.17.0",
+    "electron-vite": "6.0.0",
+    "eslint": "10.13.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.5",
+    "zod": "4.6.7"
+  }
+}
